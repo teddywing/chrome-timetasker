@@ -28,8 +28,14 @@
 		popupate_select(module_0, MODULE);
 	}, 500);
 
-	popupate_select(task_0, TASK);
-	popupate_select(work_type_0, WORK_TYPE);
+	window.setTimeout(function() {
+		popupate_select(task_0, TASK);
+	}, 500);
+
+	window.setTimeout(function() {
+		popupate_select(work_type_0, WORK_TYPE);
+	}, 500);
+
 	// popupate_select(date_0, '');
 	time_0.value = TIME;
 	popupate_select(billable_0, BILLABLE ? 't' : 'f');
