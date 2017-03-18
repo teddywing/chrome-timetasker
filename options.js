@@ -35,7 +35,6 @@ function restore_options() {
 		time: 7,
 		billable: true
 	}, function(items) {
-		conosle.log(items);
 		document.getElementById('client').value = items.client;
 		document.getElementById('project').value = items.project;
 		document.getElementById('module').value = items.module;
