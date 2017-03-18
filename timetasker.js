@@ -31,7 +31,7 @@
 		popupate_select(work_type_0, WORK_TYPE);
 	}, 500);
 	// popupate_select(date_0, '');
-	popupate_select(time_0, TIME);
+	time_0.value = TIME;
 	popupate_select(billable_0, BILLABLE ? 't' : 'f');
 
 
