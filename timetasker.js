@@ -37,14 +37,30 @@
 		popupate_select(work_type_0, WORK_TYPE);
 	}, 500);
 
-	// popupate_select(date_0, '');
 	time_0.value = TIME;
 	popupate_select(billable_0, BILLABLE ? 't' : 'f');
 
 
-	for (var i = 0; i < 4; i++) {
-		duplicate_0.click();
-	}
+	window.setTimeout(function() {
+		for (var i = 0; i < 4; i++) {
+			duplicate_0.click();
+		}
+
+		date_0.addEventListener('change', function() {
+			var date_group = this.value.split('/')
+			var date = new Date(
+				'20' + date_group[2],
+				date_group[1] - 1, // JS 0-indexed month
+				date_group[0]
+			);
+
+			for (var i = 2; i <= 5; i++) {
+				var date_el = document.getElementById('f_date' + i);
+				date.setDate(date.getDate() + 1);
+				date_el.value = format_date(date);
+			}
+		});
+	}, 2000);
 
 
 	function popupate_select(element, name) {
@@ -62,5 +78,13 @@
 		var event = document.createEvent('HTMLEvents');
 		event.initEvent('change', false, true);
 		element.dispatchEvent(event);
+	}
+
+	// Format: dd/mm/yy
+	function format_date(date) {
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear().toString().substring(2);
+
+		return date.getDate() + '/' + month + '/' + year;
 	}
 })();
