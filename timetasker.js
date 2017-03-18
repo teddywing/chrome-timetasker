@@ -19,17 +19,17 @@
 
 
 	popupate_select(client_0, CLIENT);
-	popupate_select(project_0, PROJECT);
-	// need to add a damn event trigger in order to get options to load
+
+	fire_select_event(
+		popupate_select(project_0, PROJECT)
+	);
+
 	window.setTimeout(function() {
 		popupate_select(module_0, MODULE);
-	}, 1500);
-	window.setTimeout(function() {
-		popupate_select(task_0, TASK);
 	}, 500);
-	window.setTimeout(function() {
-		popupate_select(work_type_0, WORK_TYPE);
-	}, 500);
+
+	popupate_select(task_0, TASK);
+	popupate_select(work_type_0, WORK_TYPE);
 	// popupate_select(date_0, '');
 	time_0.value = TIME;
 	popupate_select(billable_0, BILLABLE ? 't' : 'f');
@@ -41,8 +41,14 @@
 		for (var i = 0; i < options.length; i++) {
 			if (options[i].textContent === name) {
 				element.value = options[i].value;
-				return;
+				return element;
 			}
 		}
+	}
+
+	function fire_select_event(element) {
+		var event = document.createEvent('HTMLEvents');
+		event.initEvent('change', false, true);
+		element.dispatchEvent(event);
 	}
 })();
