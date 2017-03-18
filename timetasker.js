@@ -19,26 +19,26 @@
 	var duplicate_0 = document.querySelector('[onclick="Timegrid.duplicate(0);"]');
 
 
-	popupate_select(client_0, CLIENT);
+	populate_select(client_0, CLIENT);
 
 	fire_select_event(
-		popupate_select(project_0, PROJECT)
+		populate_select(project_0, PROJECT)
 	);
 
 	window.setTimeout(function() {
-		popupate_select(module_0, MODULE);
+		populate_select(module_0, MODULE);
 	}, 500);
 
 	window.setTimeout(function() {
-		popupate_select(task_0, TASK);
+		populate_select(task_0, TASK);
 	}, 500);
 
 	window.setTimeout(function() {
-		popupate_select(work_type_0, WORK_TYPE);
+		populate_select(work_type_0, WORK_TYPE);
 	}, 500);
 
 	time_0.value = TIME;
-	popupate_select(billable_0, BILLABLE ? 't' : 'f');
+	populate_select(billable_0, BILLABLE ? 't' : 'f');
 
 
 	window.setTimeout(function() {
@@ -63,7 +63,7 @@
 	}, 2000);
 
 
-	function popupate_select(element, name) {
+	function populate_select(element, name) {
 		var options = element.getElementsByTagName('option');
 
 		for (var i = 0; i < options.length; i++) {
