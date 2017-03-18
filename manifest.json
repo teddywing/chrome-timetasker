@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+
+	"name": "Timetasker",
+	"description": "Automatic weekly Time Task form filler",
+	"version": "0.0.1",
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.timetask.com/time/add/"],
+			"js": ["timetasker.js"]
+		}
+	]
+}
