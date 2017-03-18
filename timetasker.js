@@ -1,13 +1,14 @@
-(function() {
-	var CLIENT = 'af83';
-	var PROJECT = 'Enroute';
-	var MODULE = 'Sprint 3';
-	var TASK = 'General Time - No Task';
-	var WORK_TYPE = 'Développeur';
-	var TIME = 7;
-	var BILLABLE = true;
+chrome.storage.sync.get({
+	client: '',
+	project: '',
+	module: '',
+	task: 'General Time - No Task',
+	work_type: '',
+	time: 7,
+	billable: true
+}, timetasker);
 
-
+function timetasker (fields) {
 	var client_0 = document.getElementById('f_clientID0');
 	var project_0 = document.getElementById('f_projectID0');
 	var module_0 = document.getElementById('f_moduleID0');
@@ -19,26 +20,26 @@
 	var duplicate_0 = document.querySelector('[onclick="Timegrid.duplicate(0);"]');
 
 
-	populate_select(client_0, CLIENT);
+	populate_select(client_0, fields.client);
 
 	fire_select_event(
-		populate_select(project_0, PROJECT)
+		populate_select(project_0, fields.project)
 	);
 
 	window.setTimeout(function() {
-		populate_select(module_0, MODULE);
+		populate_select(module_0, fields.module);
 	}, 500);
 
 	window.setTimeout(function() {
-		populate_select(task_0, TASK);
+		populate_select(task_0, fields.task);
 	}, 500);
 
 	window.setTimeout(function() {
-		populate_select(work_type_0, WORK_TYPE);
+		populate_select(work_type_0, fields.work_type);
 	}, 500);
 
-	time_0.value = TIME;
-	populate_select(billable_0, BILLABLE ? 't' : 'f');
+	time_0.value = fields.time;
+	populate_select(billable_0, fields.billable ? 't' : 'f');
 
 
 	window.setTimeout(function() {
@@ -87,4 +88,4 @@
 
 		return date.getDate() + '/' + month + '/' + year;
 	}
-})();
+}
