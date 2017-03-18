@@ -16,6 +16,7 @@
 	var date_0 = document.getElementById('f_date0');
 	var time_0 = document.getElementById('f_time0');
 	var billable_0 = document.getElementById('f_billable0');
+	var duplicate_0 = document.querySelector('[onclick="Timegrid.duplicate(0);"]');
 
 
 	popupate_select(client_0, CLIENT);
@@ -39,6 +40,11 @@
 	// popupate_select(date_0, '');
 	time_0.value = TIME;
 	popupate_select(billable_0, BILLABLE ? 't' : 'f');
+
+
+	for (var i = 0; i < 4; i++) {
+		duplicate_0.click();
+	}
 
 
 	function popupate_select(element, name) {
