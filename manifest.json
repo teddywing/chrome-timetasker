@@ -10,5 +10,10 @@
 			"matches": ["*://*.timetask.com/time/add/"],
 			"js": ["timetasker.js"]
 		}
-	]
+	],
+
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true
+	}
 }
