@@ -47,6 +47,8 @@ function timetasker (fields) {
 			duplicate_0.click();
 		}
 
+		// Auto-fill the four duplicated time entries with dates following
+		// the one picked in the first time entry
 		date_0.addEventListener('change', function() {
 			var date_group = this.value.split('/')
 			var date = new Date(
