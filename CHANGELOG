@@ -1,0 +1,9 @@
+CHANGELOG
+=========
+
+v0.0.2 (2017.03.19):
+	* Code cleanup
+	* Fix bug populating the billable checkbox
+
+v0.0.1 (2017.03.19):
+	* Initial release
