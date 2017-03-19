@@ -1,11 +1,11 @@
 function save_options() {
-	var client = document.getElementById('client').value
-	var project = document.getElementById('project').value
-	var module = document.getElementById('module').value
-	var task = document.getElementById('task').value
-	var work_type = document.getElementById('work_type').value
-	var time = document.getElementById('time').value
-	var billable = document.getElementById('billable').checked
+	var client = document.getElementById('client').value;
+	var project = document.getElementById('project').value;
+	var module = document.getElementById('module').value;
+	var task = document.getElementById('task').value;
+	var work_type = document.getElementById('work_type').value;
+	var time = document.getElementById('time').value;
+	var billable = document.getElementById('billable').checked;
 
 	chrome.storage.sync.set({
 		client: client,
