@@ -39,7 +39,10 @@ function timetasker (fields) {
 	}, 500);
 
 	time_0.value = fields.time;
-	populate_select(billable_0, fields.billable ? 't' : 'f');
+
+	window.setTimeout(function() {
+		billable_0.checked = fields.billable;
+	}, 500);
 
 
 	window.setTimeout(function() {
