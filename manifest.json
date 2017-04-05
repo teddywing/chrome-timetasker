@@ -3,7 +3,7 @@
 
 	"name": "Timetasker",
 	"description": "Automatic weekly Time Task form filler",
-	"version": "0.0.2",
+	"version": "0.0.3",
 
 	"content_scripts": [
 		{

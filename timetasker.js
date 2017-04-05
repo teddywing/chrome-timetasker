@@ -28,21 +28,21 @@ function timetasker (fields) {
 
 	window.setTimeout(function() {
 		populate_select(module_0, fields.module);
-	}, 500);
+	}, 1000);
 
 	window.setTimeout(function() {
 		populate_select(task_0, fields.task);
-	}, 500);
+	}, 1000);
 
 	window.setTimeout(function() {
 		populate_select(work_type_0, fields.work_type);
-	}, 500);
+	}, 1000);
 
 	time_0.value = fields.time;
 
 	window.setTimeout(function() {
 		billable_0.checked = fields.billable;
-	}, 500);
+	}, 800);
 
 
 	window.setTimeout(function() {

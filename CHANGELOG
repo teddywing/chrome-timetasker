@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+v0.0.3 (2017.04.05):
+	* Increase timeouts of asynchronous select box auto-populators
+
 v0.0.2 (2017.03.19):
 	* Code cleanup
 	* Fix bug populating the billable checkbox
